@@ -1,0 +1,238 @@
+/* 
+.content-2{
+    background-color:ivory;
+    margin-bottom: 300px;
+}
+body{
+    background-color: ivory;
+    width: 100vh;
+}
+.logo{
+    width: 300px;
+    height: 100px;
+}
+.body{
+    margin-bottom: 0px;
+}
+
+.nav1{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color:#3C3C3C;
+    justify-content: space-between;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin-right: 650px;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color: white;
+    
+}
+.btn:hover{
+    background-color: #fff200;
+}
+ .buttons{
+    margin-right: 4em;
+ 
+} 
+
+
+.login{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    margin-right: 0px;
+    padding: 8px;
+    border-radius: 14px;
+    background-color: #ffed8a;
+}
+
+.signup{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    margin-left: 20px;
+    padding: 8px;
+    border-radius: 14px;
+    background-color: rgb(255, 237, 138);
+}
+
+.text{
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 100px;
+        font-style: normal;
+    }
+.para{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style:normal
+}
+.create{
+    font-family:"Montserrat", sans-serif;
+    font-size: medium;
+    margin-bottom: 100px;
+    padding: 8px;
+    border-radius: 14px;
+    background-color: rgba(37, 172, 10, 0.763);
+    color:rgb(255, 255, 255);
+}
+
+.bg{
+    justify-content: center;
+} */
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
+body{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    width: 200px;
+}
+header{
+    display: flex;
+    width: 100%;
+    background-color: #3C3C3C;
+    
+}
+.nav-btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: large;
+    font-weight: 400;
+}
+.cate {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3C3C3C;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  .dropdown li {
+    list-style: none;
+    margin: 5px 0;
+    padding: 8px;
+  }
+  
+  .cate:hover .dropdown {
+    display: block;
+  }
+.btn{
+    padding: 7px 5px 7px 5px;
+    font-size: medium;
+    font-weight: 400;
+    border-radius: 10px;
+    background-color: #d9ea7e;
+}
+.btn:hover{
+    background-color: gold;
+}
+section{
+    
+    height:fit-content;
+    display: flex;
+    padding: 10px;
+}
+.btn1{
+    padding: 15px 10px 15px 10px;
+    color:  #000000dc;
+    font-size: medium;
+    font-weight: 400;
+    border-radius: 10px;
+    background-color:#c9d30e;
+}
+.btn1:hover{
+    background-color:gold
+
+
+}
+.content > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    
+}
+p{
+    text-align: center;
+    max-width: 80vw;
+    margin:10px 0px 10px 0px ;
+}
+.bg{
+    margin-top: 100px;
+
+}
+.response{
+    width:100%;
+    height: auto;
+
+}
+.content1{
+    gap: 5px;
+    width: 98.7%;
+    display: flex;
+    align-items: flex-start ;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+   
+
+}
+.icon{
+    width: 100%;
+}
+.contents{
+    text-align: left;
+    max-width: 400px;
+}
+/* .footer-content{
+
+    width: 100%;
+    background-color: #3C3C3C;
+    
+} */
+.foot{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    background-color: #3C3C3C;
+    height: 4rem
+}
+.foot > p{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
