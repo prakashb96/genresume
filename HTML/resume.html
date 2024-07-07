@@ -36,6 +36,13 @@
     <input type="text" id="workexp" name="workexp" placeholder="Companyname"> 
     <input type="text" id="workexp" name="workexp" placeholder="Year of experience"> 
     <input type="text" id="workexp" name="workexp" placeholder="Description..."><br><br>
+
+    <label for="courses">Courses:</label><br>
+    <input type="checkbox" id="courses" name="courses" placeholder="python,React,kaggle...."><br><br>
+
+    <label for="Certification">Certification:</label><br>
+    <input type="text" id="Certification" name="Certification" placeholder="python,React,kaggle...."><br><br>
+
     <button id="myBtn" type="submit">SUBIT</button>
     <p id="data">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, beatae.
@@ -51,8 +58,10 @@
             let skill = document.getElementById("skill").value;
             let Education = document.getElementById("Education").value;
             let workexp = document.getElementById("workexp").value;
+            let courses = document.getElementById("courses").value;
+            let Certification = document.getElementById("Certification").value;
             document.getElementById("data").innerHTML += "<h1>"+fname+"</h1> <br><h1>"+lname+"</h1> <br><h1>"+contact+"</h1>  <br><h1>"+email+"</h1>  <br><h1>"+linkedin+"</h1>  <br><h1>"+skill+"</h1>"+Education+"</h1>  <br><h1>"+"</h1>  <br><h1>"
-                +workexp+"</h1>  <br><h1>";
+                +workexp+"</h1>  <br><h1>"+courses+"</h1> <br><h1>"+Certification+"</h1> <br><h1>";
             
         });
     </script>
