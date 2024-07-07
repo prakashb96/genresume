@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" placeholder="Doe"><br><br>
+ 
+    <label for="contact">Contact:</label><br>
+    <input type="number" id="contact" name="contact" placeholder="123456789"><br><br>
+
+    <label for="email">Email ID:</label><br>
+    <input type="text" id="email" name="email" placeholder="xyz123@gmail.com"><br><br>
+    <label for="location">Location:</label><br>
+    <input type="text" id="location" name="location" placeholder="in/linkedinid"><br><br>
+    <label for="linkedin">LinkedIn:</label><br>
+    <input type="text" id="linkedin" name="linkedin" placeholder="in/linkedinid"><br><br>
+    <label for="skill">Skills:</label><br>
+    <input type="text" id="skill" name="skill" placeholder="marketing/problemsolving..."><br><br>
+
+    <label for="Education">Education:</label><br>
+    <input type="text" id="Education" name="Education" placeholder="U.G/P.G degree...">
+    <input type="text" id="Education" name="Education" placeholder="12thgrade...">
+    <input type="text" id="Education" name="Education" placeholder="10thgrade..."> <br><br>
+
+    <label for="workexp">Work experience:</label><br>
+    <input type="text" id="workexp" name="workexp" placeholder="position">
+    <input type="text" id="workexp" name="workexp" placeholder="Companyname"> 
+    <input type="text" id="workexp" name="workexp" placeholder="Year of experience"> 
+    <input type="text" id="workexp" name="workexp" placeholder="Description..."><br><br>
+    <button id="myBtn" type="submit">SUBIT</button>
+    <p id="data">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, beatae.
+    </p>
+    
+    <script>
+        document.getElementById("myBtn").addEventListener("click", function(event) {
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+            let contact = document.getElementById("contact").value;
+            let email = document.getElementById("email").value;
+            let linkedin = document.getElementById("linkedin").value;
+            let skill = document.getElementById("skill").value;
+            let Education = document.getElementById("Education").value;
+            let workexp = document.getElementById("workexp").value;
+            document.getElementById("data").innerHTML += "<h1>"+fname+"</h1> <br><h1>"+lname+"</h1> <br><h1>"+contact+"</h1>  <br><h1>"+email+"</h1>  <br><h1>"+linkedin+"</h1>  <br><h1>"+skill+"</h1>"+Education+"</h1>  <br><h1>"+"</h1>  <br><h1>"
+                +workexp+"</h1>  <br><h1>";
+            
+        });
+    </script>
+</body>
+
+</html>
