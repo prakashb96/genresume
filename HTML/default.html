@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="icon" href="./img/webdp1.png">
+    <link rel="stylesheet" href="./css/default.css">
+    <style>
+        .section {
+            display: none;
+            width: 500px;
+            background-color: #fff;
+            border: 3px solid #ccc;
+            padding: 23px;
+            border-radius: 3px;
+            padding-bottom: 75px;
+            margin: 0 auto;
+        }
+        .section.active {
+            display: block;
+        }
+        .bttnn, .bttnp {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="section active" id="section1">
+            <h1>Personal Details</h1>
+            <form>
+                <label class="topic">First name</label>
+                <input type="text" id="fname" placeholder="Enter firstname"><br>
+
+                <label class="topic">Last name</label>
+                <input type="text" id="lname" placeholder="Enter lastname"><br>
+
+                <label class="topic">Email</label>
+                <input type="email" id="email" placeholder="Enter Email"><br>
+
+                <label class="topic">Phone</label>
+                <input type="number" id="phone" placeholder="Enter Phone"><br>
+
+                <label class="topic">Location</label>
+                <input type="text" id="location" placeholder="City, Country"><br>
+
+                <label class="topic">Github</label>
+                <input type="text" id="github" placeholder="Enter Github"><br>
+
+                <label class="topic">LinkedIn</label>
+                <input type="text" id="linkedin" placeholder="Enter LinkedIn"><br>
+
+                <div class="bttnn">
+                    <button type="button" onclick="nextSection(1)">Next page</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="section" id="section2">
+            <h1>Profile</h1>
+            <form>
+                <textarea id="aboutme" placeholder="Introduce yourself by pitching your skills & explaining how they can be of value to a company"></textarea>
+                <div class="bttnp">
+                    <button type="button" onclick="previousSection(2)">Previous page</button>
+                </div>
+                <div class="bttnn">
+                    <button type="button" onclick="nextSection(2)">Next page</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="section" id="section3">
+            <h1>Professional Experience</h1>
+            <form>
+                <label class="topic">Job Title</label>
+                <input type="text" id="jobtitle" placeholder="Enter Job Title"><br>
+
+                <label class="topic">Employer</label>
+                <input type="text" id="employer" placeholder="Enter employer"><br>
+
+                <label class="topic">City</label>
+                <input type="text" id="city" placeholder="Enter City"><br>
+
+                <label class="topic">Country</label>
+                <input type="text" id="country" placeholder="Enter Country"><br>
+
+                <label class="topic">Description</label>
+                <textarea id="description" placeholder="Describe your role & achievements"></textarea><br>         
+                <div class="bttnp">
+                    <button type="button" onclick="previousSection(3)">Previous page</button>
+                </div>
+                <div class="bttnn">
+                    <button type="button" onclick="nextSection(3)">Next page</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="section" id="section4">
+            <h1>Skills</h1>
+            <form>
+                <input type="text" id="skills" placeholder="Enter Skill"><br>
+                <div class="bttnp">
+                    <button type="button" onclick="previousSection(4)">Previous page</button>
+                </div>
+                <div class="bttnn">
+                    <button type="button" onclick="nextSection(4)">Next page</button>
+                </div>
+           </form>
+        </div>
+
+        <div class="section" id="section5">
+            <h1>Language</h1>
+            <form>
+                <input type="text" id="lang" placeholder="Enter language"><br>
+                <div class="bttnp">
+                    <button type="button" onclick="previousSection(5)">Previous page</button>
+                </div>
+                <div class="bttnn">
+                    <button type="button" onclick="nextSection(5)">Next page</button>
+                </div>
+           </form>
+        </div>
+
+        <div class="section" id="section6">
+            <h1>Certificate</h1>
+            <form>
+                <input type="text" id="certificate" placeholder="Enter Certificate"><br>
+                <div class="bttnp">
+                    <button type="button" onclick="previousSection(6)">Previous page</button>
+                </div>
+                <div class="bttnn">
+                    <button type="button" onclick="nextSection(6)">Next page</button>
+                </div>
+           </form>
+        </div>
+
+        <div class="section" id="section7">
+            <h1>Hobby</h1>
+            <form>
+                <input type="text" id="hobby" placeholder="Enter Hobby">
+                <div class="bttnp">
+                    <button type="button" onclick="previousSection(7)">Previous page</button>
+                </div>
+                <div class="bttnn">
+                    <button type="button" onclick="nextSection(7)">Next page</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="section" id="section8">
+            <h1>Course</h1>
+            <form>
+                <label class="topic">Course Title</label>
+                <input type="text" id="coursetitle" placeholder="Enter Course"><br>
+
+                <label class="topic">Institution</label>
+                <input type="text" id="institution" placeholder="Enter Institution"><br>
+
+                <label class="topic">City</label>
+                <input type="text" id="courseCity" placeholder="Enter City"><br>
+
+                <label class="topic">Country</label>
+                <input type="text" id="courseCountry" placeholder="Enter Country"><br>
+
+                <label class="topic">Description</label>
+                <textarea id="courseDescription" placeholder="Describe your role & achievements"></textarea><br>
+                <div class="bttnp">
+                    <button type="button" onclick="previousSection(8)">Previous page</button>
+                </div>
+                <div class="bttnn">
+                    <button type="button" onclick="nextSection(8)">Next page</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="section" id="section9">
+            <h1>Reference</h1>
+            <form id="resumeForm">
+                <input type="text" id="reference" placeholder="Enter Reference">
+                <div class="bttnp">
+                    <button type="button" onclick="previousSection(9)">Previous page</button>
+                </div>
+                <div class="bttnn">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const finish_point = 9;
+        
+        function nextSection(currentIndex) {
+            if (currentIndex < finish_point) {
+                document.getElementById(`section${currentIndex}`).classList.remove('active');
+                document.getElementById(`section${currentIndex + 1}`).classList.add('active');
+            }
+        }
+
+        function previousSection(currentIndex) {
+            if (currentIndex > 1) {
+                document.getElementById(`section${currentIndex}`).classList.remove('active');
+                document.getElementById(`section${currentIndex - 1}`).classList.add('active');
+            }
+        }
+
+        
+
+
+
+        document.getElementById("resumeForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            let resumedata = {
+                fname: document.getElementById("fname").value,
+                lname: document.getElementById("lname").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                location: document.getElementById("location").value,
+                github: document.getElementById("github").value,
+                linkedin: document.getElementById("linkedin").value,
+                aboutme: document.getElementById("aboutme").value,
+                jobtitle: document.getElementById("jobtitle").value,
+                employer: document.getElementById("employer").value,
+                city: document.getElementById("city").value,
+                country: document.getElementById("country").value,
+                description: document.getElementById("description").value,
+                skills: document.getElementById("skills").value,
+                lang: document.getElementById("lang").value,
+                certificate: document.getElementById("certificate").value,
+                hobby: document.getElementById("hobby").value,
+                coursetitle: document.getElementById("coursetitle").value,
+                institution: document.getElementById("institution").value,
+                courseCity: document.getElementById("courseCity").value,
+                courseCountry: document.getElementById("courseCountry").value,
+                courseDescription: document.getElementById("courseDescription").value,
+                reference: document.getElementById("reference").value
+            };
+            
+            sessionStorage.setItem('resumedata', JSON.stringify(resumedata));
+            window.location.href = 'template.html';
+
+    });
+
+
+    </script>
+    
+
+
+   
+
+</body>
+</html>

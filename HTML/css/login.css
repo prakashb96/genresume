@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/loginbg6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 560px;
+    position: relative;
+} */
+ body{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/loginbg6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center center; 
+    min-height: 100vh; 
+ }
+
+.wrapper{
+    width: 420px;
+    color: white;
+    border: 2px solid rgb(255, 255, 255.2);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    padding: 30px 40px;
+    margin-top: 30px;
+}
+
+.wrapper h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.wrapper .input-box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    position:relative;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 40px;
+    border: 2px solid white;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.input-box input::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+
+.input-box i{
+    position: absolute;
+    right: 25px;
+    top: 30%;
+    font-size: 20px;
+}
+.remember{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button{
+    width: 100%;
+    padding:15px;
+    border-radius: 40px;
+    margin-top: 3%;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.signup{
+   display: flex;
+   justify-content: center;
+   margin-top: 7%;
+}
