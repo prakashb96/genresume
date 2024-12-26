@@ -5,30 +5,27 @@
 }
 
 body {
+   
     background-color: #f4f4f4;
     background-image: url('./img/loginpg.png');
-    display: flex;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position:center;
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-
-
-
-
 .wrapper {
     background-color: #fff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: normal;
 }
 
 h1 {
@@ -56,12 +53,11 @@ h1 {
     left: 40px;
     top: 50%;
     transform: translateY(-60%);
-    color: #c6b8b8;
+    color: #9e9e9e;
     font-weight: 500;
     font-size: 1rem;
     transition: 0.3s ease-in-out;
     pointer-events: none;
-    
 }
 
 .input input {
@@ -78,7 +74,6 @@ h1 {
     border-color:  hsl(346, 100%, 63%);
 }
 
-
 .input input:focus + label,
 .input input:not(:placeholder-shown)+label {
     top: -10px;
@@ -86,6 +81,8 @@ h1 {
     font-size: 1rem;
     color: #2c1338;
 }
+
+
 
 .input input:placeholder-shown + label {
     top: 50%;
@@ -104,8 +101,8 @@ h1 {
 .show-password {
     position: absolute;
     right: 10px;
-    top: 15%;
-    transform: translateY(50%);
+    top: 50%;
+    transform: translateY(-50%);
     color: #9e9e9e;
     cursor: pointer;
     font-size: 0.9rem;
@@ -115,7 +112,7 @@ h1 {
 button {
     width: 100%;
     padding: 0.8rem;
-    background: linear-gradient(90deg, hsl(346, 100%, 63%), #ff4b2b);
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
     color: white;
     border: none;
     border-radius: 5px;
@@ -147,4 +144,3 @@ button:hover {
 .login a:hover {
     text-decoration: underline;
 }
-

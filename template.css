@@ -1,10 +1,20 @@
-.btn{
-    padding: 7px 5px 7px 5px;
-    font-size: medium;
+#btn{
+    padding: 10px 20px;
+    color:  #000000dc;
+    font-size: 16px;
     font-weight: 400;
     border-radius: 10px;
-    background-color: #d9ea7e;
+    color: white;
+    background-color: #c9d30e;
+    border: none;
+    cursor:pointer;
+    
+    
+    
 }
-.btn:hover{
-    background-color: gold;
+
+#btn:hover{
+    background-color:green;
+    
 }
+
