@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Page</title>
+        <link rel="stylesheet" href="./profile.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Welcome to Your Profile</h1>
+            <div id="profile-info">
+                <p><strong>Name:</strong> <span id="name"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Password:</strong> <span id="password"></span></p>
+            </div>
+            <form id="update-form">
+                <label for="newName">Update Name:</label>
+                <input type="text" id="newName" placeholder="Enter new name">
+                <br>
+                <button type="submit" id="btn">Update</button>
+            </form>
+        </div>
+
+        <script>
+            const userId = localStorage.getItem('userId'); // Store userId after login
+
+            // Fetch profile info
+            async function fetchProfile() {
+                const response = await fetch(`http://localhost:5000/profile/${userId}`);
+                const data = await response.json();
+
+                document.getElementById('name').textContent = data.name;
+                document.getElementById('email').textContent = data.email;
+                document.getElementById('password').textContent = '******'; // Hide password
+            }
+
+            // Update profile
+            document.getElementById('update-form').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const newName = document.getElementById('newName').value;
+
+                const response = await fetch(`http://localhost:5000/profile/${userId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name: newName }),
+                });
+
+                const result = await response.json();
+                alert(result.message);
+
+                if (response.ok) {
+                    fetchProfile(); // Refresh profile info
+                }
+            });
+
+            fetchProfile();
+        </script>
+    </body>
+</html>
