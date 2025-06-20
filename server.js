@@ -7,18 +7,13 @@ const cors = require('cors');
 const app = express();
 const PORT = 5000;
 
-// Middleware
 app.use(bodyParser.json());
 app.use(cors());
 
-// MongoDB connection
-mongoose.connect('mongodb://127.0.0.1:27017/userdb', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => console.log("Connected to MongoDB"))
+mongoose.connect('mongodb+srv://admin:admin123@cluster0.ld6e3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(() => console.log("Connected to MongoDB"))
   .catch(err => console.error("Could not connect to MongoDB:", err));
 
-// User schema and model
+
 const userSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
@@ -66,7 +61,6 @@ app.post('/login', async (req, res) => {
     }
 });
 
-// Profile route
 app.get('/profile/:userId', async (req, res) => {
     const { userId } = req.params;
 
@@ -81,7 +75,6 @@ app.get('/profile/:userId', async (req, res) => {
     }
 });
 
-// Update profile route
 app.put('/profile/:userId', async (req, res) => {
     const { userId } = req.params;
     const { name } = req.body;
@@ -97,7 +90,6 @@ app.put('/profile/:userId', async (req, res) => {
     }
 });
 
-// Start server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
